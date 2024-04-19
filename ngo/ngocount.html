@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <!-- left content logo-->
+      <div class="left">
+        <img src="img/logo.png" alt="WEBSITE LOGO" height="85px" width="100%" />
+      </div>
+      <!-- mid content navbar-->
+      <div class="mid">
+        <ul class="nav">
+          <li><a href="#" class="navLink active">Home</a></li>
+          <div class="dropdown">
+            <li>
+              <a href="#" class="navLink"
+                >Project <i class="fa-solid fa-caret-down drop"></i
+              ></a>
+            </li>
+            <div class="dropdown-content">
+              <a href="#">Project PITHU</a>
+              <a href="#">Project SEHAT</a>
+              <a href="#">Project SAKSHAM</a>
+              <a href="#">Project SASHAKT</a>
+              <a href="#">Project INSANIYAT</a>
+            </div>
+          </div>
+          <div class="dropdown">
+            <li>
+              <a href="#" class="navLink"
+                >About
+                <i class="fa-solid fa-caret-down drop"></i>
+              </a>
+            </li>
+            <div class="dropdown-content">
+              <a href="#">Vision & Mission</a>
+              <a href="#">Team</a>
+              <a href="#">Letters of Appreciation</a>
+              <a href="#">Legal Status</a>
+              <a href="#">TAX EXEMPTION DONATION FAQS</a>
+            </div>
+          </div>
+          <li><a href="#" class="navLink">Our FAQs</a></li>
+          <li><a href="#" class="navLink">Contact Us</a></li>
+        </ul>
+      </div>
+      <!--right content button-->
+      <div class="rightmain">
+        <div class="right">
+          <button type="button" class="ctaBtn">Donate</button>
+        </div>
+        <div class="profileimg">
+          <button type="button" class="profilebutton">
+            <img src="img/linkedin.png" width="40" height="40" />
+            <div class="custom-dropdown">
+              <div class="selected-option">
+                <i class="fa-solid fa-angle-up fa-rotate-180"></i>
+              </div>
+              <ul class="dropdown-options">
+                <li data-value="option1">log out</li>
+              </ul>
+            </div>
+          </button>
+        </div>
+      </div>
+    </header>
+    <!-- hr row -->
+    <hr />
+    <!--countngo-->
+    <section class="dashoboardwrapper">
+      <div class="menu"></div>
+      <div class="rightwrapper">
+        <div class="rightmain">
+          <div class="mainbox">
+            <div class="box">
+              <img src="img/coins-hand.svg" width="58px" height="58px" />
+              <p><span>2,00,000/-</span><span>TotalDonation</span></p>
+            </div>
+            <div class="box secend">
+              <img src="img/Icon.svg" />
+              <p><span>234</span><span>Total Fundraisers</span></p>
+            </div>
+            <div class="box">
+              <img src="img/Icon.svg" />
+              <p><span>200</span><span>Active Fundraisers</span></p>
+            </div>
+            <div class="box secend">
+              <img src="img/coins-03.svg" />
+              <p><span>35,000/-</span><span>Today’s Donation</span></p>
+            </div>
+            <div class="box">
+              <img src="img/coins-03.svg" />
+              <p><span>2,00,000/-</span><span>Last Month Donation</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--start dropdown function-->
+    <script>
+      $(document).ready(function () {
+        // Handle clicking on the selected option to show/hide the dropdown
+        $(".selected-option").click(function () {
+          $(".dropdown-options").slideToggle();
+        });
+
+        // Handle selecting an option from the dropdown
+        $(".dropdown-options li").click(function () {
+          var selectedValue = $(this).attr("data-value");
+          $(".selected-option").text($(this).text());
+          $(".dropdown-options").slideUp();
+        });
+
+        // Close the dropdown if the user clicks outside of it
+        $(document).click(function (e) {
+          if (!$(e.target).closest(".custom-dropdown").length) {
+            $(".dropdown-options").slideUp();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
