@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <section class="wrapperuplodphoto">
+        <div class="left">
+
+        </div>
+        <div class="right">
+            <h1>Upload Profile Photo</h1>
+            <form runat="server">
+                <img id="blah" src="" width="225px" height="225px" alt="" /><br>
+                <div class="photo">
+                <label for="photo">
+                <input accept="image/*" type='file' id="input tag">
+            </label>
+        </div>
+              </form>
+            <p>(Lorem ipsum dolor sit amet consectetur.)</p>
+            <button type="button" class="ctaBtn uplod">Save</button>
+            <button type="button" class="ctaBtn">Cancel</button>
+            
+
+        </button>
+
+    </section>
+    <script>
+        imgInp.onchange = evt => {
+  const [file] = imgInp.files
+  if (file) {
+    blah.src = URL.createObjectURL(file)
+  }
+}
+    </script>
+</body>
+</html>

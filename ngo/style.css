@@ -1,7 +1,5 @@
-* {
-    padding: 0px;
-    margin: 0px;
-}
+
+
 /* body content */
 
 body {
@@ -161,28 +159,37 @@ body {
     position: relative;
     font-family: Arial, sans-serif;
     border: none;
+    z-index: 1;
 }
                         
 .profileimg .selected-option {
     cursor: pointer;
+    margin-left: 4px;
+    margin-top: 14px;
 
 }
                         
 .profileimg .dropdown-options {
+    min-width: 91px;
     list-style: none;
-    width: 70px;
-    height: 31px;
     padding: 0;
-    margin: 0;
     display: none;
     position: absolute;
     border: 1px solid #ccc;
     background-color: #fff;
 }
-                        
+.dropdown-options i{
+    display: inline-block;
+}                       
 .profileimg .dropdown-options li {
     padding: 10px;
     cursor: pointer;
+    display: flex;
+    min-width: 88px;
+}
+.dropdown-options img {
+    border: none;
+    min-width: 47px;
 }
                         
 .profileimg .dropdown-options li:hover {
@@ -393,6 +400,7 @@ hr {
     width: 100%;
     background-color: #e6e6e6;
     max-height: 200px;
+    position: relative;
 }
 .photowrapper .col img{
     width: 100%;
@@ -400,11 +408,12 @@ hr {
 }
 .photowrapper .row .col button{
     display: flex;
-    float: right ;
     border: none;
     cursor: pointer;
     position: absolute;
+    right: 0;
 }
+
 .dashoboardwrapper {
     width: 100%;
     display: flex;
@@ -424,7 +433,7 @@ hr {
     width: 100%;
     height: 198px;
     position: relative;
-    background-color: #ffa64d;
+    background-color: #ffcc99;
 }
 .rightwrapper .mainbox {
     width: 100%;
@@ -469,8 +478,59 @@ hr {
 .rightwrapper .box.secend{
     border:3px solid #3F3EC3;
 }
-
-
+/* photouplod*/
+.wrapperuplodphoto{
+    width: 100%;
+    display: flex;
+}
+.wrapperuplodphoto .left {
+    width: 20%;
+}
+.wrapperuplodphoto .right {
+    width: 80%;
+}
+.wrapperuplodphoto .right h1 {
+    display: flex;
+    width: 198px;
+    height: 24px;
+    gap: 8px;
+    margin-top: 35px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #000000;
+}
+.wrapperuplodphoto .right img {
+    margin-top: 20px;
+}
+.wrapperuplodphoto .right input {
+    margin-top: 10px;
+    opacity: 0.5;
+}
+.wrapperuplodphoto .right p {
+    color:#344054;
+    font-size: 14px;
+    font-weight: 500;
+}
+.wrapperuplodphoto .right .ctaBtn {
+    float: right;
+    font-size: 16px;
+    border: 1px solid;
+    border-radius: 8px;
+    padding: 10px 20px 10px 20px;
+    background-color: #FFFFFF;
+    color: #79747E;
+    min-width: 94px;
+    cursor: pointer;
+    margin-right: 8px;
+}
+.wrapperuplodphoto .right .ctaBtn.uplod {
+    background-color: #010080;
+    color: #FFFFFF;
+    margin-right: 8px;
+}
+.photo {
+    color: #000000;
+}
 
 
 
