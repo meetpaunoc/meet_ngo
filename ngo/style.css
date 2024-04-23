@@ -536,8 +536,9 @@ hr {
     color: #FFFFFF;
     margin-right: 8px;
 }
-.photo {
-    color: #000000;
+#blah {
+    height: 198px;
+    width: 198px;
 }
 
 
