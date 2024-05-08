@@ -202,6 +202,9 @@
     <!--start dropdown function-->
     <script>
       $(document).ready(function () {
+        // make menu by default hidden
+        $(".dropdown-options").css("display","none")
+
         // Handle clicking on the selected option to show/hide the dropdown
         $(".selected-option").click(function () {
           $(".dropdown-options").slideToggle();

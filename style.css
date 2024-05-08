@@ -75,6 +75,12 @@ body {
     background: linear-gradient(90deg, rgba(244, 171, 0, 1) 0%, rgba(245, 245, 249, 1) 89%);
     opacity: 0;
 }
+.sidebar {
+    display: none;
+}
+.main {
+    display: none;
+}
 
 .header .mid .nav li .navLink:hover::after {
     opacity: 1;
@@ -148,7 +154,9 @@ body {
     cursor: pointer;
     font-weight: bold;
 }
-
+#main {
+    display: none;
+}
 
 .header .right .ctaBtn.filled {
     background-color: #252988;
@@ -343,7 +351,8 @@ hr {
     display: flex;
     position: absolute;
     margin-top: 19px;
-    right: 926px;
+    right:0px;
+    margin-right: 22px;
 }
 
 .loginformwrapper .loginwrapper .form-main .form_create .container_password label {
@@ -361,8 +370,8 @@ hr {
 .loginformwrapper span {
     display: flex;
     margin-top: 5px;
+    position: relative;
 }
-
 
 /*section_2_information content*/
 .loginformwrapper .informationwrapper {
@@ -494,7 +503,7 @@ body {
 
 .fundraisingwrapper .view {
     width: 20%;
-}min-height
+}
 .fundraisingwrapper .fundraising{
     width: 80%;
 }
@@ -805,7 +814,7 @@ input[type=number]::-webkit-outer-spin-button {
 .backgroundwrapper .inform h1{
         display: flex;
         align-items: center;
-        margin-left: 60px;
+        margin-left: 96px;
         justify-content: center;
         color: #fff;
         font-size: 41px;
@@ -1086,7 +1095,7 @@ input[type=number]::-webkit-outer-spin-button {
     padding: 10px;
     cursor: pointer;
     display: flex;
-    min-width: 114px;
+    min-width: 134px;
     border-radius: 16px;
     font-size: 20px;
 }
@@ -1493,7 +1502,7 @@ input[type=number]::-webkit-outer-spin-button {
     float: right;
     margin-right: 18px;
 }
-
+/* mobile view */
 @media screen and (max-width: 768px) {
    * {
         margin: 0px;
@@ -1516,6 +1525,81 @@ input[type=number]::-webkit-outer-spin-button {
     .header .mid {
        display: none;
     }
+
+    /* new add 
+    */
+    .sidebar {
+        display: block;
+        height: 100%;
+        width: 200px;
+        position: fixed;
+        z-index: 1;
+        padding-bottom: 20px;
+        top: 0;
+        right:0;
+        background-color: #FFF;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+      }
+      
+      .sidebar a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        justify-content: center;
+        font-size: 25px;
+        color: #5d5d5d;
+        display: flex;
+        transition: 0.3s;
+      }
+      
+      .sidebar a:hover {
+        color: orange;
+      }
+      .sidebar .navLink {
+        position: relative;
+      }
+      .sidebar .navLink::after {
+        position: absolute;
+        content: '';
+        bottom: 0;
+        left: 0;
+        border-radius: 4px;
+        height: 2px;
+        width: 100%;
+        margin: 0 10px;
+        background: linear-gradient(90deg, rgba(244, 171, 0, 1) 0%, rgba(245, 245, 249, 1) 89%);
+        opacity: 0;
+      }
+      .sidebar .navLink:hover::after {
+        opacity: 1;
+    }
+      .sidebar .closebtn {
+        position: absolute;
+        top: 0;
+        right: 0px;
+        font-size: 36px;
+        margin-left: 50px;
+      }
+      
+      .openbtn {
+        font-size: 20px;
+        cursor: pointer;
+        background-color:#fff;
+        padding: 10px 15px;
+        border: none;
+      }
+      .openbtn:hover {
+        background-color: #444;
+      }
+      #main {
+        display: inline-block;
+      }
+      
+      #main {
+        transition: margin-left .5s;
+      }
+    /**/
     .header .rightmain .ctaBtn {
         min-height: 34px;
         min-width: 72px;
@@ -1523,12 +1607,10 @@ input[type=number]::-webkit-outer-spin-button {
         background-color: #fff;
         border: 1px solid #010080;
         padding: 6px 12px;
-        color:  #010080;
+        color: #010080;
         font-size: 18px;
         font-weight: 500;
         line-height: 21px;
-        
-
     }
     .header .rightmain .profileimg {
         display: none;

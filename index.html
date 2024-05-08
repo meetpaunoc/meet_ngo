@@ -70,8 +70,8 @@
       <div class="rightmain">
         <div class="right">
           <button type="button" class="ctaBtn">Donate</button>
-          <div class="droplist">
-            <img src="img/ic_round-menu.svg" width="22.5px" height="17.68px">
+          <div id="main">
+            <button class="openbtn" onclick="openNav()">☰</button>  
           </div>
         </div>
         <div class="profileimg">
@@ -89,8 +89,16 @@
               </ul>
             </div>
           </button>
+          <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="#" class="navLink active">Home</a>
+            <a href="#" class="navLink">Projects</a>
+            <a href="#" class="navLink">About Us</a>
+            <a href="#" class="navLink">Our FAQs</a>
+            <a href="#" class="navLink">Contact Us</a>
+          </div>
+         
         </div>
-      
     </header>
     <!-- hr row -->
     <hr />
@@ -218,7 +226,7 @@
             <img src="img/qr scanner.png" />
             <p>
               <a href="#"
-                ><i class="fa-regular fa-circle-dotin"></i>UPI ID -
+                >UPI ID -
                 supportourheroes.6234910@hdfcbank</a
               >
             </p>
@@ -252,5 +260,15 @@
         <p>Copyright © 2022 Support Our Heroes</p>
       </div>
     </footer>
+    <script>
+      function  openNav() {
+        document.getElementById("mySidebar").style.width = "200px";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+      }
+      </script>
   </body>
 </html>
